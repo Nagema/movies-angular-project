@@ -1,1 +1,12 @@
-<p>movies works!</p>
+<app-navbar></app-navbar>
+
+<div class="movies-container">
+  <div *ngFor="let movie of movies">
+    <div routerLink="/movies/id/{{ movie._id }}">
+      <p>
+        {{ movie.title }}
+      </p>
+      <img referrerPolicy="no-referrer" src="{{ movie.img }}" alt="" />
+    </div>
+  </div>
+</div>
