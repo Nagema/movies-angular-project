@@ -1,4 +1,6 @@
 .movie-detail-container {
+    position: relative;
+    top: 70px;
     padding: 30px;
     border-color: none;
     border-radius: 20px;
@@ -9,6 +11,7 @@
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
     background-color: rgba(71, 57, 57, 0.109);
     align-items: center;
+    z-index: -1;
 }
 .detail-main-info {
     display: flex;

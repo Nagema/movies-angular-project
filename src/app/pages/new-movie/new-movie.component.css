@@ -1,7 +1,7 @@
 .form-container {
     padding: 40px;
-    width: 500px;
-  
+    margin-top: 10%;
+    width: 350px;
 }
 .form-wrapper {
     display: flex;
