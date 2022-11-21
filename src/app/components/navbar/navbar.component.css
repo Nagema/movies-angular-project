@@ -1,6 +1,6 @@
 .navbar{
     justify-content: space-between;
-    padding: 10px 30px;
+    padding: 20px 30px;
     position: fixed;
     width: 100%;
     background: linear-gradient( 90deg , #4c0e4e 30%, #7e2d02 100%);

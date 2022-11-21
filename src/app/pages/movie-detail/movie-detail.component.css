@@ -1,10 +1,13 @@
-.movie-detail-container {
+
+.detail-wrapper{
     position: relative;
-    top: 70px;
-    padding: 30px;
+    top: 100px;
+    z-index: -1;  
+}
+.movie-detail-container {
     border-color: none;
     border-radius: 20px;
-    margin: 5%;
+    margin: 0 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,6 +15,7 @@
     background-color: rgba(71, 57, 57, 0.109);
     align-items: center;
     z-index: -1;
+
 }
 .detail-main-info {
     display: flex;
@@ -42,4 +46,18 @@
 }
 .button-wrapper {
     padding: 20px 0;
+}
+@media (min-width: 600px) {
+    .detail-main-info {
+        display: flex;
+        flex-direction: row;
+    }  
+    .detail-main-info div {
+        padding: 0 40px;
+    }
+    .synopsis {
+        padding: 10px;
+        max-width: 500px;
+    }
+
 }
