@@ -8,9 +8,24 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './pages/home/home.component';
 import { MovieDetailComponent } from './pages/movie-detail/movie-detail.component';
+import { NewMovieComponent } from './pages/new-movie/new-movie.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
-  declarations: [AppComponent, MoviesComponent, NavbarComponent, HomeComponent, MovieDetailComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  declarations: [
+    AppComponent,
+    MoviesComponent,
+    NavbarComponent,
+    HomeComponent,
+    MovieDetailComponent,
+    NewMovieComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

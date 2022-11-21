@@ -23,6 +23,13 @@ export class MoviesService {
     );
   }
 
+  public postMovieInfo(newMovieInfo: any): Observable<any> {
+    return this.http.post(
+      'https://movies-api-ll3t.vercel.app/info/create',
+      newMovieInfo
+    );
+  }
+
   public deleteMovie(id: any): Observable<any> {
     return this.http.delete(
       'https://movies-api-ll3t.vercel.app/movies/delete/' + id

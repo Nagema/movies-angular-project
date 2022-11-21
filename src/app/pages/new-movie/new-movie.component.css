@@ -1,0 +1,12 @@
+.form-container {
+    padding: 40px;
+    width: 500px;
+  
+}
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+}
+.input-group {
+    display: flex;
+}
