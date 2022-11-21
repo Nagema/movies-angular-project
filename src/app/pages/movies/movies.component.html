@@ -3,10 +3,15 @@
 <div class="movies-container">
   <div *ngFor="let movie of movies">
     <div routerLink="/movies/id/{{ movie._id }}">
-      <p>
+      <p class="movie-title">
         {{ movie.title }}
       </p>
-      <img referrerPolicy="no-referrer" src="{{ movie.img }}" alt="" />
+      <img
+        class="movie-img"
+        referrerPolicy="no-referrer"
+        src="{{ movie.img }}"
+        alt="{{ movie.title }}"
+      />
     </div>
   </div>
 </div>

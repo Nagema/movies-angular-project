@@ -1,0 +1,7 @@
+.navbar{
+    justify-content: flex-end;
+    padding: 10px;
+}
+.navbar a {
+    padding: 10px;
+}
