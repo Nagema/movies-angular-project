@@ -1,4 +1,21 @@
 <div>
-  <h2>{{ movie?.title }}</h2>
-  <img src="{{ movie?.img }}" alt="{{ movie?.title }}" />
+  <app-navbar></app-navbar>
+  <div class="movie-detail-container">
+    <div class="detail-main-info">
+      <div>
+        <h2>{{ movie?.title }}</h2>
+        <img src="{{ movie?.img }}" alt="{{ movie?.title }}" />
+      </div>
+      <div class="detail-info">
+        <p>Director: {{ movie?.info[0].director }}</p>
+        <p>Duration: {{ movie?.info[0].duration }} minutes</p>
+        <p>Genre: {{ movie?.info[0].genre }}</p>
+        <p>Year: {{ movie?.info[0].year }}</p>
+      </div>
+    </div>
+    <div class="synopsis">Synopsis: {{ movie?.info[0].synopsis }}</div>
+    <div class="button-wrapper">
+      <button class="btn btn-light">Edit Movie</button>
+    </div>
+  </div>
 </div>
