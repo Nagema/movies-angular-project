@@ -18,7 +18,6 @@ export class MovieDetailComponent {
       this.id = params.get('id');
 
       this.moviesService.getMovie(this.id).subscribe((data: any) => {
-        console.log(data);
         this.movie = data;
       });
     });
