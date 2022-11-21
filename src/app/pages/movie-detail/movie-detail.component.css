@@ -17,6 +17,7 @@
     z-index: -1;
 
 }
+
 .detail-main-info {
     display: flex;
     flex-direction: column;
@@ -44,8 +45,14 @@
     text-align: justify;
     align-items: center;
 }
+.buttons {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
 .button-wrapper {
-    padding: 20px 0;
+    padding: 20px;
 }
 @media (min-width: 600px) {
     .detail-main-info {
@@ -58,6 +65,10 @@
     .synopsis {
         padding: 10px;
         max-width: 500px;
+    }
+    .buttons {
+        display: flex;
+        flex-direction: row;
     }
 
 }

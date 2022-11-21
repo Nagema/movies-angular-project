@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MoviesService } from 'src/services/movies.service';
-
 @Component({
   selector: 'app-movie-detail',
   templateUrl: './movie-detail.component.html',
@@ -23,4 +22,7 @@ export class MovieDetailComponent {
     });
   }
   ngOnInit(): void {}
+  delete() {
+    this.moviesService.deleteMovie(this.id).subscribe();
+  }
 }

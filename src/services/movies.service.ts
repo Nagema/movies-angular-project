@@ -31,8 +31,6 @@ export class MoviesService {
   }
 
   public deleteMovie(id: any): Observable<any> {
-    return this.http.delete(
-      'https://movies-api-ll3t.vercel.app/movies/delete/' + id
-    );
+    return this.http.delete('http://localhost:8080/movies/delete/' + id);
   }
 }

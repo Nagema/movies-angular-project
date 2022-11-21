@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MoviesService } from 'src/services/movies.service';
 import { lastValueFrom } from 'rxjs';
+import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-new-movie',
@@ -29,7 +31,8 @@ export class NewMovieComponent implements OnInit {
 
   constructor(
     private moviesService: MoviesService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -48,12 +51,19 @@ export class NewMovieComponent implements OnInit {
       this.newMovie.img = this.newMovieInfo.img;
     });
   }
-
+  Swal = require('sweetalert2');
   async onSubmit() {
     const movieInfo = await lastValueFrom(
       this.moviesService.postMovieInfo(this.newMovieInfo)
     );
     this.newMovie.info = movieInfo._id;
     await this.moviesService.postMovie(this.newMovie).subscribe();
+    this.router.navigate(['/movies']);
+    Swal.fire({
+      title: 'Success!',
+      text: 'Movie created successfully',
+      icon: 'success',
+      confirmButtonText: 'OK',
+    });
   }
 }

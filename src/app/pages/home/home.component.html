@@ -1,1 +1,45 @@
 <app-navbar></app-navbar>
+<main class="main-page-container">
+  <div>
+    <div class="wrapper">
+      <main class="main">
+        <div class="slide">
+          <div class="portfolio">
+            <section class="portfolio_items">
+              <figure *ngFor="let movie of movies" class="portfolio_item">
+                <img
+                  class="movie-img"
+                  referrerPolicy="no-referrer"
+                  src="{{ movie.img }}"
+                  alt="{{ movie.title }}"
+                />
+              </figure>
+            </section>
+          </div>
+        </div>
+      </main>
+      <div class="home-info-text">
+        <p class="item-1">All the movies you can find</p>
+
+        <p class="item-2">Create new movies information</p>
+
+        <p class="item-3">Edit the information</p>
+      </div>
+    </div>
+
+    <div class="movies-carousel">
+      <div class="bd-best">
+        <div class="bd-best-list">
+          <figure class="bd-best-item" *ngFor="let movie of movies">
+            <img
+              class="kl_img"
+              referrerPolicy="no-referrer"
+              src="{{ movie.img }}"
+              alt="{{ movie.title }}"
+            />
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

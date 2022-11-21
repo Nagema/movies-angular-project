@@ -14,8 +14,13 @@
       </div>
     </div>
     <div class="synopsis">Synopsis: {{ movie?.info[0]?.synopsis }}</div>
-    <div class="button-wrapper">
-      <button class="btn btn-light">Edit Movie</button>
+    <div class="buttons">
+      <div class="button-wrapper">
+        <button class="btn btn-light">Edit Movie</button>
+      </div>
+      <div class="button-wrapper">
+        <button class="btn btn-warning" (click)="delete()">Delete Movie</button>
+      </div>
     </div>
   </div>
 </div>
