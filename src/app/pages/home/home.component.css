@@ -8,7 +8,6 @@
 	display: block
 }
 
-
 .home-info-text {
 	padding-top: 30px;
 }
@@ -118,7 +117,6 @@
   
   .portfolio_item img {
 	width: 300px;
-
 	border: 0;
 	outline: 0;
 	display: block;
@@ -126,6 +124,7 @@
 
   .kl_img{
 	width: 200px;
+	border-radius: 5px;
 }
 
   @keyframes leftRight{

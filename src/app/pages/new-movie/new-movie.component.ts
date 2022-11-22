@@ -11,6 +11,8 @@ import Swal from 'sweetalert2';
   styleUrls: ['./new-movie.component.css'],
 })
 export class NewMovieComponent implements OnInit {
+  id: any;
+
   infoMovies?: any[];
   newMovie: any = {
     title: '',
@@ -57,13 +59,20 @@ export class NewMovieComponent implements OnInit {
       this.moviesService.postMovieInfo(this.newMovieInfo)
     );
     this.newMovie.info = movieInfo._id;
-    await this.moviesService.postMovie(this.newMovie).subscribe();
-    this.router.navigate(['/movies']);
+
+    const movie = await lastValueFrom(
+      this.moviesService.postMovie(this.newMovie)
+    );
+    console.log(movie);
     Swal.fire({
       title: 'Success!',
       text: 'Movie created successfully',
       icon: 'success',
       confirmButtonText: 'OK',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.router.navigate(['/movies/id/' + movie._id]);
+      }
     });
   }
 }
