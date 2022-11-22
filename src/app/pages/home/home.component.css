@@ -12,6 +12,12 @@
 	padding-top: 30px;
 }
 
+.movies-container-loader {
+    display: flex;
+    justify-content: center;
+    padding-top: 50vh;
+}
+
 .item-1, 
 .item-2, 
 .item-3 {

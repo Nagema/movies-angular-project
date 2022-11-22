@@ -1,17 +1,21 @@
 <app-navbar></app-navbar>
-
-<div class="movies-container">
-  <div *ngFor="let movie of movies">
-    <div routerLink="/movies/id/{{ movie._id }}">
-      <p class="movie-title">
-        {{ movie.title }}
-      </p>
-      <img
-        class="movie-img"
-        referrerPolicy="no-referrer"
-        src="{{ movie.img }}"
-        alt="{{ movie.title }}"
-      />
+<div class="movies-container-loader" *ngIf="!movies">
+  <app-loader></app-loader>
+</div>
+<div *ngIf="movies">
+  <div class="movies-container">
+    <div *ngFor="let movie of movies">
+      <div routerLink="/movies/id/{{ movie._id }}">
+        <p class="movie-title">
+          {{ movie.title }}
+        </p>
+        <img
+          class="movie-img"
+          referrerPolicy="no-referrer"
+          src="{{ movie.img }}"
+          alt="{{ movie.title }}"
+        />
+      </div>
     </div>
   </div>
 </div>

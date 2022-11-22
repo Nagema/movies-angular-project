@@ -54,6 +54,12 @@
 .button-wrapper {
     padding: 20px;
 }
+
+.movies-container-loader {
+    display: flex;
+    justify-content: center;
+    padding-top: 50vh;
+}
 @media (min-width: 600px) {
     .detail-main-info {
         display: flex;

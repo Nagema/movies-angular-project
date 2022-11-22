@@ -1,5 +1,10 @@
 <app-navbar></app-navbar>
-<div class="detail-wrapper">
+
+<div class="movies-container-loader" *ngIf="!movie">
+  <app-loader></app-loader>
+</div>
+
+<div *ngIf="movie" class="detail-wrapper">
   <div class="movie-detail-container">
     <div class="detail-main-info">
       <div>

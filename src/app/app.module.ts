@@ -10,6 +10,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { MovieDetailComponent } from './pages/movie-detail/movie-detail.component';
 import { NewMovieComponent } from './pages/new-movie/new-movie.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoaderComponent } from './components/loader/loader.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     MovieDetailComponent,
     NewMovieComponent,
+    LoaderComponent,
   ],
   imports: [
     BrowserModule,
