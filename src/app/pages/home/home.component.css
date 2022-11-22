@@ -126,7 +126,6 @@
 
   .kl_img{
 	width: 200px;
-
 }
 
   @keyframes leftRight{
@@ -273,7 +272,7 @@
   padding: 0 0 0 !important;
 }
 
-@media (min-width: 3700px) {
+@media (min-width: 370px) {
 
 .bd-best {
 	min-height: 200px;
@@ -282,12 +281,11 @@
 .bd-best-item {
 	width: 200px;
 	height: 100px;
-		}	
+	}	
 .bd-best-list {
-	animation-duration: 180s;
-		}
+	animation-duration: 120s;
+	}
 .kl_img{
-	width: 200px;
-}
-
+	width: 25vh;
+	}
 }
