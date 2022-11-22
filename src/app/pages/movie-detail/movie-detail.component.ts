@@ -24,7 +24,13 @@ export class MovieDetailComponent {
     });
   }
   ngOnInit(): void {}
+
+  goToUpdate() {
+    this.router.navigate(['movie/edit/' + this.id]);
+  }
+
   Swal = require('sweetalert2');
+
   delete() {
     Swal.fire({
       title: 'Are you sure?',

@@ -1,0 +1,132 @@
+
+.form-container {
+    padding-top: 10vh;
+}
+input{
+    background: none;
+    border: 0.5px solid rgba(255, 255, 255, 0.164);
+    width: 300px;
+    color: white;
+}
+
+select {
+    background: none;
+    border: 0.5px solid rgba(255, 255, 255, 0.164);
+    width: 300px;
+    color: white;
+}
+label {
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+input::placeholder{
+    color: white;
+}
+input:focus{
+    background: none;
+    color: white;
+}
+
+.update-bottom-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detail-small-info {
+    display: flex;
+}
+
+.detail-main-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.detail-main-info img {
+    width: 250px;
+    height: 350px;
+}
+.detail-info {
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.synopsis {
+    color: rgb(245, 245, 245);
+    font-weight: 100;
+    padding: 0 20px;
+    text-align: justify;
+    align-items: center;
+}
+textarea {
+    background: none;
+    color: white;
+    min-width: 300px;
+    min-height: 280px;
+}
+textarea::placeholder{
+    color: white;
+}
+
+textarea:focus {
+    background: none;
+    color: white;
+}
+.buttons {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.button-wrapper {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 0;
+}
+.cancel {
+    padding-bottom: 40px;
+}
+
+.movies-container-loader {
+    display: flex;
+    justify-content: center;
+    padding-top: 50vh;
+}
+@media (min-width: 600px) {
+    .detail-main-info {
+        display: flex;
+        flex-direction: row;
+    }  
+
+    .detail-info {
+        margin: 0;
+        padding: 0;
+    }
+
+    .detail-info div {
+        padding: 0;
+    }
+    .detail-main-info div {
+        padding: 0 40px;
+    }
+    .synopsis {
+        padding: 10px;
+        max-width: 500px;
+    }
+    .buttons {
+        display: flex;
+        flex-direction: row;
+    }
+    textarea {
+        width: 600px;
+    }
+
+}

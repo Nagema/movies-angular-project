@@ -11,6 +11,7 @@ import { MovieDetailComponent } from './pages/movie-detail/movie-detail.componen
 import { NewMovieComponent } from './pages/new-movie/new-movie.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoaderComponent } from './components/loader/loader.component';
+import { MovieUpdateComponent } from './pages/movie-update/movie-update.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +21,7 @@ import { LoaderComponent } from './components/loader/loader.component';
     MovieDetailComponent,
     NewMovieComponent,
     LoaderComponent,
+    MovieUpdateComponent,
   ],
   imports: [
     BrowserModule,

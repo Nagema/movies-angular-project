@@ -30,7 +30,18 @@ export class MoviesService {
     );
   }
 
-  public deleteMovie(id: any): Observable<any> {
+  public updateMovieInfo(id: string, updateMovie: any): Observable<any> {
+    return this.http.put('http://localhost:8080/info/edit/' + id, updateMovie);
+  }
+
+  public updateMovie(id: string, updateMovie: any): Observable<any> {
+    return this.http.put(
+      'http://localhost:8080/movies/edit/' + id,
+      updateMovie
+    );
+  }
+
+  public deleteMovie(id: string): Observable<any> {
     return this.http.delete('http://localhost:8080/movies/delete/' + id);
   }
 }

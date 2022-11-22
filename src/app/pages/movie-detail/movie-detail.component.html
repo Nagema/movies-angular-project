@@ -9,7 +9,11 @@
     <div class="detail-main-info">
       <div>
         <h2>{{ movie?.title }}</h2>
-        <img src="{{ movie?.img }}" alt="{{ movie?.title }}" />
+        <img
+          src="{{ movie?.img }}"
+          alt="{{ movie?.title }}"
+          referrerPolicy="no-referrer"
+        />
       </div>
       <div class="detail-info">
         <p>Director: {{ movie?.info[0]?.director }}</p>
@@ -20,9 +24,9 @@
     </div>
     <div class="synopsis">Synopsis: {{ movie?.info[0]?.synopsis }}</div>
     <div class="buttons">
-      <!-- <div class="button-wrapper">
-        <button class="btn btn-light">Edit Movie</button>
-      </div> -->
+      <div class="button-wrapper">
+        <button class="btn btn-light" (click)="goToUpdate()">Edit Movie</button>
+      </div>
       <div class="button-wrapper">
         <button class="btn btn-warning" (click)="delete()">Delete Movie</button>
       </div>

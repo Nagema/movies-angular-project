@@ -1,0 +1,111 @@
+<app-navbar></app-navbar>
+
+<div class="movies-container-loader" *ngIf="!movie">
+  <app-loader></app-loader>
+</div>
+
+<form [formGroup]="movieForm" (ngSubmit)="onSubmit()">
+  <div class="form-container">
+    <div class="detail-main-info">
+      <div *ngIf="movie">
+        <img
+          src="{{ movie.img }}"
+          alt="{{ movie.title }}"
+          referrerPolicy="no-referrer"
+        />
+      </div>
+
+      <div class="detail-info">
+        <div>
+          <label>Movie Title</label>
+          <input
+            type="text"
+            class="form-control"
+            value="{{ movie.title }}"
+            formControlName="title"
+          />
+        </div>
+
+        <div>
+          <label>Movie Image URL</label>
+          <input
+            value="URL image"
+            type="text"
+            class="form-control"
+            formControlName="img"
+            value="{{ movie.img }}"
+          />
+        </div>
+
+        <div>
+          <label>Director</label>
+          <input
+            type="text"
+            class="form-control"
+            value="{{ movie.director }}"
+            formControlName="director"
+          />
+        </div>
+
+        <div>
+          <label>Duration (minutes)</label>
+          <input
+            type="text"
+            class="form-control"
+            value="{{ movie.duration }}"
+            formControlName="duration"
+          />
+        </div>
+
+        <div>
+          <label>Year</label>
+          <input
+            type="text"
+            class="form-control"
+            value="{{ movie.year }}"
+            formControlName="year"
+          />
+        </div>
+
+        <div>
+          <label>Genre</label>
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            formControlName="genre"
+          >
+            <option disabled selected>{{ movie.genre }}</option>
+            <option value="Acción">Acción</option>
+            <option value="Aventuras">Aventuras</option>
+            <option value="Comedia">Comedia</option>
+            <option value="Drama">Drama</option>
+            <option value="Fantasía">Fantasía</option>
+            <option value="Musical">Musical</option>
+            <option value="Suspense">Suspense</option>
+            <option value="Terror">Terror</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="update-bottom-info">
+      <label for="exampleFormControlTextarea1">Synopsis</label>
+      <div class="synopsis">
+        <textarea
+          formControlName="synopsis"
+          class="form-control"
+          id="exampleFormControlTextarea1"
+          rows="3"
+          placeholder="{{ movie.synopsis }}"
+          value="{{ movie.synopsis }}"
+        ></textarea>
+      </div>
+      <div class="button-wrapper">
+        <button class="btn btn-warning">update</button>
+      </div>
+    </div>
+  </div>
+</form>
+<div class="button-wrapper cancel">
+  <button class="btn btn-light" (click)="goToMovies()">cancel</button>
+</div>
